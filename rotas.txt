@@ -1,0 +1,559 @@
+                                                       PUT                 /projects/:id(.:format)                                                        projects#save_project_configs
+                                              contexts GET                 /contexts(.:format)                                                            contexts#index
+                                                       POST                /contexts(.:format)                                                            contexts#create
+                                           new_context GET                 /contexts/new(.:format)                                                        contexts#new
+                                          edit_context GET                 /contexts/:id/edit(.:format)                                                   contexts#edit
+                                               context GET                 /contexts/:id(.:format)                                                        contexts#show
+                                                       PUT                 /contexts/:id(.:format)                                                        contexts#update
+                                                       DELETE              /contexts/:id(.:format)                                                        contexts#destroy
+                                                grupos GET                 /grupos(.:format)                                                              grupos#index
+                                                       POST                /grupos(.:format)                                                              grupos#create
+                                             new_grupo GET                 /grupos/new(.:format)                                                          grupos#new
+                                            edit_grupo GET                 /grupos/:id/edit(.:format)                                                     grupos#edit
+                                                 grupo GET                 /grupos/:id(.:format)                                                          grupos#show
+                                                       PUT                 /grupos/:id(.:format)                                                          grupos#update
+                                                       DELETE              /grupos/:id(.:format)                                                          grupos#destroy
+                                         work_packages GET                 /work_packages(.:format)                                                       work_packages#index
+                                                       POST                /work_packages(.:format)                                                       work_packages#create
+                                      new_work_package GET                 /work_packages/new(.:format)                                                   work_packages#new
+                                     edit_work_package GET                 /work_packages/:id/edit(.:format)                                              work_packages#edit
+                                          work_package GET                 /work_packages/:id(.:format)                                                   work_packages#show
+                                                       PUT                 /work_packages/:id(.:format)                                                   work_packages#update
+                                                       DELETE              /work_packages/:id(.:format)                                                   work_packages#destroy
+                                          contexts_new GET                 /contexts/new(.:format)                                                        contexts#new
+                                      admin_groups_new GET                 /admin/groups/new(.:format)                                                    grupos#new
+                                          admin_groups POST                /admin/groups(.:format)                                                        grupos#create
+                                                  home                     /                                                                              welcome#index
+                                                                           /issues(/)(.:format)                                                           :controller#:action
+                                                                           /issues/*rest(.:format)                                                        :controller#:action
+                                                                           /wp(/)(.:format)                                                               :controller#:action
+                                                                           /wp/*rest(.:format)                                                            :controller#:action
+                         account_force_password_change GET                 /account/force_password_change(.:format)                                       account#force_password_change
+                               account_change_password POST                /account/change_password(.:format)                                             account#change_password
+                                 account_lost_password GET|POST            /account/lost_password(.:format)                                               account#lost_password
+                                      account_register GET|POST            /account/register(.:format)                                                    account#register
+                                        omniauth_login GET|POST            /auth/:provider/callback(.:format)                                             account#omniauth_login
+                                          auth_failure GET                 /auth/failure(.:format)                                                        account#omniauth_failure
+                                                signin GET|POST            /login(.:format)                                                               account#login
+                                               signout GET                 /logout(.:format)                                                              account#logout
+                                                   api GET|POST|PUT|DELETE /api/v1/*rest(.:format)                                                        #<Proc:0x0000000fd0e6c0@/home/almeida/openproject/config/routes.rb:66>
+                           api_v2_authentication_index GET                 /api/v2/authentication(.:format)                                               api/v2/authentication#index
+                                                       POST                /api/v2/authentication(.:format)                                               api/v2/authentication#create
+                             new_api_v2_authentication GET                 /api/v2/authentication/new(.:format)                                           api/v2/authentication#new
+                            edit_api_v2_authentication GET                 /api/v2/authentication/:id/edit(.:format)                                      api/v2/authentication#edit
+                                 api_v2_authentication GET                 /api/v2/authentication/:id(.:format)                                           api/v2/authentication#show
+                                                       PUT                 /api/v2/authentication/:id(.:format)                                           api/v2/authentication#update
+                                                       DELETE              /api/v2/authentication/:id(.:format)                                           api/v2/authentication#destroy
+                                          api_v2_users GET                 /api/v2/users(.:format)                                                        api/v2/users#index
+                      api_v2_planning_element_journals GET                 /api/v2/planning_element_journals(.:format)                                    api/v2/planning_element_journals#index
+                                                       POST                /api/v2/planning_element_journals(.:format)                                    api/v2/planning_element_journals#create
+                   new_api_v2_planning_element_journal GET                 /api/v2/planning_element_journals/new(.:format)                                api/v2/planning_element_journals#new
+                  edit_api_v2_planning_element_journal GET                 /api/v2/planning_element_journals/:id/edit(.:format)                           api/v2/planning_element_journals#edit
+                       api_v2_planning_element_journal GET                 /api/v2/planning_element_journals/:id(.:format)                                api/v2/planning_element_journals#show
+                                                       PUT                 /api/v2/planning_element_journals/:id(.:format)                                api/v2/planning_element_journals#update
+                                                       DELETE              /api/v2/planning_element_journals/:id(.:format)                                api/v2/planning_element_journals#destroy
+                                       api_v2_statuses GET                 /api/v2/statuses(.:format)                                                     api/v2/statuses#index
+                                                       POST                /api/v2/statuses(.:format)                                                     api/v2/statuses#create
+                                     new_api_v2_status GET                 /api/v2/statuses/new(.:format)                                                 api/v2/statuses#new
+                                    edit_api_v2_status GET                 /api/v2/statuses/:id/edit(.:format)                                            api/v2/statuses#edit
+                                         api_v2_status GET                 /api/v2/statuses/:id(.:format)                                                 api/v2/statuses#show
+                                                       PUT                 /api/v2/statuses/:id(.:format)                                                 api/v2/statuses#update
+                                                       DELETE              /api/v2/statuses/:id(.:format)                                                 api/v2/statuses#destroy
+                                         api_v2_colors GET                 /api/v2/colors(.:format)                                                       api/v2/planning_element_type_colors#index
+                                                       POST                /api/v2/colors(.:format)                                                       api/v2/planning_element_type_colors#create
+                                      new_api_v2_color GET                 /api/v2/colors/new(.:format)                                                   api/v2/planning_element_type_colors#new
+                                     edit_api_v2_color GET                 /api/v2/colors/:id/edit(.:format)                                              api/v2/planning_element_type_colors#edit
+                                          api_v2_color GET                 /api/v2/colors/:id(.:format)                                                   api/v2/planning_element_type_colors#show
+                                                       PUT                 /api/v2/colors/:id(.:format)                                                   api/v2/planning_element_type_colors#update
+                                                       DELETE              /api/v2/colors/:id(.:format)                                                   api/v2/planning_element_type_colors#destroy
+                         api_v2_planning_element_types GET                 /api/v2/planning_element_types(.:format)                                       api/v2/planning_element_types#index
+                                                       POST                /api/v2/planning_element_types(.:format)                                       api/v2/planning_element_types#create
+                      new_api_v2_planning_element_type GET                 /api/v2/planning_element_types/new(.:format)                                   api/v2/planning_element_types#new
+                     edit_api_v2_planning_element_type GET                 /api/v2/planning_element_types/:id/edit(.:format)                              api/v2/planning_element_types#edit
+                          api_v2_planning_element_type GET                 /api/v2/planning_element_types/:id(.:format)                                   api/v2/planning_element_types#show
+                                                       PUT                 /api/v2/planning_element_types/:id(.:format)                                   api/v2/planning_element_types#update
+                                                       DELETE              /api/v2/planning_element_types/:id(.:format)                                   api/v2/planning_element_types#destroy
+                              api_v2_planning_elements GET                 /api/v2/planning_elements(.:format)                                            api/v2/planning_elements#index
+                                                       POST                /api/v2/planning_elements(.:format)                                            api/v2/planning_elements#create
+                           new_api_v2_planning_element GET                 /api/v2/planning_elements/new(.:format)                                        api/v2/planning_elements#new
+                          edit_api_v2_planning_element GET                 /api/v2/planning_elements/:id/edit(.:format)                                   api/v2/planning_elements#edit
+                               api_v2_planning_element GET                 /api/v2/planning_elements/:id(.:format)                                        api/v2/planning_elements#show
+                                                       PUT                 /api/v2/planning_elements/:id(.:format)                                        api/v2/planning_elements#update
+                                                       DELETE              /api/v2/planning_elements/:id(.:format)                                        api/v2/planning_elements#destroy
+                                  api_v2_project_types GET                 /api/v2/project_types(.:format)                                                api/v2/project_types#index
+                                                       POST                /api/v2/project_types(.:format)                                                api/v2/project_types#create
+                               new_api_v2_project_type GET                 /api/v2/project_types/new(.:format)                                            api/v2/project_types#new
+                              edit_api_v2_project_type GET                 /api/v2/project_types/:id/edit(.:format)                                       api/v2/project_types#edit
+                                   api_v2_project_type GET                 /api/v2/project_types/:id(.:format)                                            api/v2/project_types#show
+                                                       PUT                 /api/v2/project_types/:id(.:format)                                            api/v2/project_types#update
+                                                       DELETE              /api/v2/project_types/:id(.:format)                                            api/v2/project_types#destroy
+                      api_v2_reported_project_statuses GET                 /api/v2/reported_project_statuses(.:format)                                    api/v2/reported_project_statuses#index
+                                                       POST                /api/v2/reported_project_statuses(.:format)                                    api/v2/reported_project_statuses#create
+                    new_api_v2_reported_project_status GET                 /api/v2/reported_project_statuses/new(.:format)                                api/v2/reported_project_statuses#new
+                   edit_api_v2_reported_project_status GET                 /api/v2/reported_project_statuses/:id/edit(.:format)                           api/v2/reported_project_statuses#edit
+                        api_v2_reported_project_status GET                 /api/v2/reported_project_statuses/:id(.:format)                                api/v2/reported_project_statuses#show
+                                                       PUT                 /api/v2/reported_project_statuses/:id(.:format)                                api/v2/reported_project_statuses#update
+                                                       DELETE              /api/v2/reported_project_statuses/:id(.:format)                                api/v2/reported_project_statuses#destroy
+                                                       GET                 /api/v2/statuses(.:format)                                                     api/v2/statuses#index
+                                                       GET                 /api/v2/statuses/:id(.:format)                                                 api/v2/statuses#show
+                                      api_v2_timelines GET                 /api/v2/timelines(.:format)                                                    api/v2/timelines#index
+                                                       POST                /api/v2/timelines(.:format)                                                    api/v2/timelines#create
+                                   new_api_v2_timeline GET                 /api/v2/timelines/new(.:format)                                                api/v2/timelines#new
+                                  edit_api_v2_timeline GET                 /api/v2/timelines/:id/edit(.:format)                                           api/v2/timelines#edit
+                                       api_v2_timeline GET                 /api/v2/timelines/:id(.:format)                                                api/v2/timelines#show
+                                                       PUT                 /api/v2/timelines/:id(.:format)                                                api/v2/timelines#update
+                                                       DELETE              /api/v2/timelines/:id(.:format)                                                api/v2/timelines#destroy
+                    api_v2_planning_element_priorities GET                 /api/v2/planning_element_priorities(.:format)                                  api/v2/planning_element_priorities#index
+                      api_v2_project_planning_elements GET                 /api/v2/projects/:project_id/planning_elements(.:format)                       api/v2/planning_elements#index
+                                                       POST                /api/v2/projects/:project_id/planning_elements(.:format)                       api/v2/planning_elements#create
+                   new_api_v2_project_planning_element GET                 /api/v2/projects/:project_id/planning_elements/new(.:format)                   api/v2/planning_elements#new
+                  edit_api_v2_project_planning_element GET                 /api/v2/projects/:project_id/planning_elements/:id/edit(.:format)              api/v2/planning_elements#edit
+                       api_v2_project_planning_element GET                 /api/v2/projects/:project_id/planning_elements/:id(.:format)                   api/v2/planning_elements#show
+                                                       PUT                 /api/v2/projects/:project_id/planning_elements/:id(.:format)                   api/v2/planning_elements#update
+                                                       DELETE              /api/v2/projects/:project_id/planning_elements/:id(.:format)                   api/v2/planning_elements#destroy
+                 api_v2_project_planning_element_types GET                 /api/v2/projects/:project_id/planning_element_types(.:format)                  api/v2/planning_element_types#index
+                                                       POST                /api/v2/projects/:project_id/planning_element_types(.:format)                  api/v2/planning_element_types#create
+              new_api_v2_project_planning_element_type GET                 /api/v2/projects/:project_id/planning_element_types/new(.:format)              api/v2/planning_element_types#new
+             edit_api_v2_project_planning_element_type GET                 /api/v2/projects/:project_id/planning_element_types/:id/edit(.:format)         api/v2/planning_element_types#edit
+                  api_v2_project_planning_element_type GET                 /api/v2/projects/:project_id/planning_element_types/:id(.:format)              api/v2/planning_element_types#show
+                                                       PUT                 /api/v2/projects/:project_id/planning_element_types/:id(.:format)              api/v2/planning_element_types#update
+                                                       DELETE              /api/v2/projects/:project_id/planning_element_types/:id(.:format)              api/v2/planning_element_types#destroy
+          available_projects_api_v2_project_reportings GET                 /api/v2/projects/:project_id/reportings/available_projects(.:format)           api/v2/reportings#available_projects
+                             api_v2_project_reportings GET                 /api/v2/projects/:project_id/reportings(.:format)                              api/v2/reportings#index
+                                                       POST                /api/v2/projects/:project_id/reportings(.:format)                              api/v2/reportings#create
+                          new_api_v2_project_reporting GET                 /api/v2/projects/:project_id/reportings/new(.:format)                          api/v2/reportings#new
+                         edit_api_v2_project_reporting GET                 /api/v2/projects/:project_id/reportings/:id/edit(.:format)                     api/v2/reportings#edit
+                              api_v2_project_reporting GET                 /api/v2/projects/:project_id/reportings/:id(.:format)                          api/v2/reportings#show
+                                                       PUT                 /api/v2/projects/:project_id/reportings/:id(.:format)                          api/v2/reportings#update
+                                                       DELETE              /api/v2/projects/:project_id/reportings/:id(.:format)                          api/v2/reportings#destroy
+available_projects_api_v2_project_project_associations GET                 /api/v2/projects/:project_id/project_associations/available_projects(.:format) api/v2/project_associations#available_projects
+                   api_v2_project_project_associations GET                 /api/v2/projects/:project_id/project_associations(.:format)                    api/v2/project_associations#index
+                                                       POST                /api/v2/projects/:project_id/project_associations(.:format)                    api/v2/project_associations#create
+                new_api_v2_project_project_association GET                 /api/v2/projects/:project_id/project_associations/new(.:format)                api/v2/project_associations#new
+               edit_api_v2_project_project_association GET                 /api/v2/projects/:project_id/project_associations/:id/edit(.:format)           api/v2/project_associations#edit
+                    api_v2_project_project_association GET                 /api/v2/projects/:project_id/project_associations/:id(.:format)                api/v2/project_associations#show
+                                                       PUT                 /api/v2/projects/:project_id/project_associations/:id(.:format)                api/v2/project_associations#update
+                                                       DELETE              /api/v2/projects/:project_id/project_associations/:id(.:format)                api/v2/project_associations#destroy
+                               api_v2_project_statuses GET                 /api/v2/projects/:project_id/statuses(.:format)                                api/v2/statuses#index
+                                 api_v2_project_status GET                 /api/v2/projects/:project_id/statuses/:id(.:format)                            api/v2/statuses#show
+                               api_v2_project_versions GET                 /api/v2/projects/:project_id/versions(.:format)                                api/v2/versions#index
+                                  api_v2_project_users GET                 /api/v2/projects/:project_id/users(.:format)                                   api/v2/users#index
+         planning_element_custom_fields_api_v2_project GET                 /api/v2/projects/:id/planning_element_custom_fields(.:format)                  api/v2/projects#planning_element_custom_fields
+                              api_v2_project_workflows GET                 /api/v2/projects/:project_id/workflows(.:format)                               api/v2/workflows#index
+                            level_list_api_v2_projects GET                 /api/v2/projects/level_list(.:format)                                          api/v2/projects#level_list
+                                       api_v2_projects GET                 /api/v2/projects(.:format)                                                     api/v2/projects#index
+                                                       POST                /api/v2/projects(.:format)                                                     api/v2/projects#create
+                                    new_api_v2_project GET                 /api/v2/projects/new(.:format)                                                 api/v2/projects#new
+                                   edit_api_v2_project GET                 /api/v2/projects/:id/edit(.:format)                                            api/v2/projects#edit
+                                        api_v2_project GET                 /api/v2/projects/:id(.:format)                                                 api/v2/projects#show
+                                                       PUT                 /api/v2/projects/:id(.:format)                                                 api/v2/projects#update
+                                                       DELETE              /api/v2/projects/:id(.:format)                                                 api/v2/projects#destroy
+                                  api_v2_custom_fields GET                 /api/v2/custom_fields(.:format)                                                api/v2/custom_fields#index
+                                                       POST                /api/v2/custom_fields(.:format)                                                api/v2/custom_fields#create
+                               new_api_v2_custom_field GET                 /api/v2/custom_fields/new(.:format)                                            api/v2/custom_fields#new
+                              edit_api_v2_custom_field GET                 /api/v2/custom_fields/:id/edit(.:format)                                       api/v2/custom_fields#edit
+                                   api_v2_custom_field GET                 /api/v2/custom_fields/:id(.:format)                                            api/v2/custom_fields#show
+                                                       PUT                 /api/v2/custom_fields/:id(.:format)                                            api/v2/custom_fields#update
+                                                       DELETE              /api/v2/custom_fields/:id(.:format)                                            api/v2/custom_fields#destroy
+                                 api_v2_paginate_users GET                 /api/v2/pagination/users(.:format)                                             api/v2/pagination/users#index
+                            api_v2_paginate_principals GET                 /api/v2/pagination/principals(.:format)                                        api/v2/pagination/principals#index
+                              api_v2_paginate_statuses GET                 /api/v2/pagination/statuses(.:format)                                          api/v2/pagination/statuses#index
+                                 api_v2_paginate_types GET                 /api/v2/pagination/types(.:format)                                             api/v2/pagination/types#index
+                         api_v2_paginate_project_types GET                 /api/v2/pagination/project_types(.:format)                                     api/v2/pagination/project_types#index
+             api_v2_paginate_reported_project_statuses GET                 /api/v2/pagination/reported_project_statuses(.:format)                         api/v2/pagination/reported_project_statuses#index
+                              api_v2_paginate_projects GET                 /api/v2/pagination/projects(.:format)                                          api/v2/pagination/projects#index
+            column_data_api_experimental_work_packages GET                 /api/experimental/work_packages/column_data(.:format)                          api/experimental/work_packages#column_data
+            column_sums_api_experimental_work_packages GET                 /api/experimental/work_packages/column_sums(.:format)                          api/experimental/work_packages#column_sums
+                        api_experimental_work_packages GET                 /api/experimental/work_packages(.:format)                                      api/experimental/work_packages#index
+            available_columns_api_experimental_queries GET                 /api/experimental/queries/available_columns(.:format)                          api/experimental/queries#available_columns
+         custom_field_filters_api_experimental_queries GET                 /api/experimental/queries/custom_field_filters(.:format)                       api/experimental/queries#custom_field_filters
+                      grouped_api_experimental_queries GET                 /api/experimental/queries/grouped(.:format)                                    api/experimental/queries#grouped
+                              api_experimental_queries POST                /api/experimental/queries(.:format)                                            api/experimental/queries#create
+                                api_experimental_query PUT                 /api/experimental/queries/:id(.:format)                                        api/experimental/queries#update
+                                                       DELETE              /api/experimental/queries/:id(.:format)                                        api/experimental/queries#destroy
+    column_sums_api_experimental_project_work_packages GET                 /api/experimental/projects/:project_id/work_packages/column_sums(.:format)     api/experimental/work_packages#column_sums
+                api_experimental_project_work_packages GET                 /api/experimental/projects/:project_id/work_packages(.:format)                 api/experimental/work_packages#index
+    available_columns_api_experimental_project_queries GET                 /api/experimental/projects/:project_id/queries/available_columns(.:format)     api/experimental/queries#available_columns
+ custom_field_filters_api_experimental_project_queries GET                 /api/experimental/projects/:project_id/queries/custom_field_filters(.:format)  api/experimental/queries#custom_field_filters
+              grouped_api_experimental_project_queries GET                 /api/experimental/projects/:project_id/queries/grouped(.:format)               api/experimental/queries#grouped
+                      api_experimental_project_queries POST                /api/experimental/projects/:project_id/queries(.:format)                       api/experimental/queries#create
+                        api_experimental_project_query PUT                 /api/experimental/projects/:project_id/queries/:id(.:format)                   api/experimental/queries#update
+                                                       DELETE              /api/experimental/projects/:project_id/queries/:id(.:format)                   api/experimental/queries#destroy
+                     api_experimental_project_versions GET                 /api/experimental/projects/:project_id/versions(.:format)                      api/experimental/versions#index
+                 api_experimental_project_sub_projects GET                 /api/experimental/projects/:project_id/sub_projects(.:format)                  api/experimental/projects#sub_projects
+                        api_experimental_project_users GET                 /api/experimental/projects/:project_id/users(.:format)                         api/experimental/users#index
+                             api_experimental_projects GET                 /api/experimental/projects(.:format)                                           api/experimental/projects#index
+                              api_experimental_project GET                 /api/experimental/projects/:id(.:format)                                       api/experimental/projects#show
+                             api_experimental_versions GET                 /api/experimental/versions(.:format)                                           api/experimental/versions#index
+                               api_experimental_groups GET                 /api/experimental/groups(.:format)                                             api/experimental/groups#index
+                                api_experimental_roles GET                 /api/experimental/roles(.:format)                                              api/experimental/roles#index
+                                api_experimental_users GET                 /api/experimental/users(.:format)                                              api/experimental/users#index
+                                              api_root                     /                                                                              API::Root
+                                                                           /roles/workflow/:id/:role_id/:type_id(.:format)                                roles#workflow
+                                                                           /help/:ctrl/:page(.:format)                                                    help#index
+                                                       POST                /types/move/:id(.:format)                                                      types#move
+                                                 types GET                 /types(.:format)                                                               types#index
+                                                       POST                /types(.:format)                                                               types#create
+                                              new_type GET                 /types/new(.:format)                                                           types#new
+                                             edit_type GET                 /types/:id/edit(.:format)                                                      types#edit
+                                                  type GET                 /types/:id(.:format)                                                           types#show
+                                                       PUT                 /types/:id(.:format)                                                           types#update
+                                                       DELETE              /types/:id(.:format)                                                           types#destroy
+               update_work_package_done_ratio_statuses POST                /statuses/update_work_package_done_ratio(.:format)                             statuses#update_work_package_done_ratio
+                                              statuses GET                 /statuses(.:format)                                                            statuses#index
+                                                       POST                /statuses(.:format)                                                            statuses#create
+                                            new_status GET                 /statuses/new(.:format)                                                        statuses#new
+                                           edit_status GET                 /statuses/:id/edit(.:format)                                                   statuses#edit
+                                                status PUT                 /statuses/:id(.:format)                                                        statuses#update
+                                                       DELETE              /statuses/:id(.:format)                                                        statuses#destroy
+                                         custom_fields GET                 /custom_fields(.:format)                                                       custom_fields#index
+                                                       POST                /custom_fields(.:format)                                                       custom_fields#create
+                                      new_custom_field GET                 /custom_fields/new(.:format)                                                   custom_fields#new
+                                     edit_custom_field GET                 /custom_fields/:id/edit(.:format)                                              custom_fields#edit
+                                          custom_field PUT                 /custom_fields/:id(.:format)                                                   custom_fields#update
+                                                       DELETE              /custom_fields/:id(.:format)                                                   custom_fields#destroy
+                                                search                     (/projects/:project_id)/search(.:format)                                       search#index
+                                       preview_journal GET                 /journals/:id/preview(.:format)                                                journals#preview
+                                          edit_journal GET                 /journals/:id/edit(.:format)                                                   journals#edit
+                                               journal PUT                 /journals/:id(.:format)                                                        journals#update
+                                   edit_wiki_menu_item GET                 /projects/:project_id/wiki/:id/wiki_menu_item/edit(.:format)                   wiki_menu_items#edit
+                                        wiki_menu_item PUT                 /projects/:project_id/wiki/:id/wiki_menu_item(.:format)                        wiki_menu_items#update
+                                      query_menu_items GET                 /projects/:project_id/query/:query_id/query_menu_items(.:format)               query_menu_items#index
+                                                       POST                /projects/:project_id/query/:query_id/query_menu_items(.:format)               query_menu_items#create
+                                   new_query_menu_item GET                 /projects/:project_id/query/:query_id/query_menu_items/new(.:format)           query_menu_items#new
+                                  edit_query_menu_item GET                 /projects/:project_id/query/:query_id/query_menu_items/:id/edit(.:format)      query_menu_items#edit
+                                       query_menu_item PUT                 /projects/:project_id/query/:query_id/query_menu_items/:id(.:format)           query_menu_items#update
+                                                       DELETE              /projects/:project_id/query/:query_id/query_menu_items/:id(.:format)           query_menu_items#destroy
+                                              wiki_new GET                 /projects/:project_id/wiki/new(.:format)                                       wiki#new
+                                           wiki_create POST                /projects/:project_id/wiki/new(.:format)                                       wiki#create
+                                        wiki_new_child GET                 /projects/:project_id/wiki/:id/new(.:format)                                   wiki#new_child
+                                         wiki_page_toc GET                 /projects/:project_id/wiki/:id/toc(.:format)                                   wiki#index
+                                          preview_wiki POST                /projects/:project_id/wiki/preview(.:format)                                   wiki#preview
+                                                       POST                /projects/:id/wiki(.:format)                                                   wikis#edit
+                                                                           /projects/:id/wiki/destroy(.:format)                                           wikis#destroy
+                                              watchers POST                /:object_type/:object_id/watchers(.:format)                                    watchers#create
+                                           new_watcher GET                 /:object_type/:object_id/watchers/new(.:format)                                watchers#new
+                                                 watch POST                /:object_type/:object_id/watch(.:format)                                       watchers#watch
+                                               unwatch DELETE              /:object_type/:object_id/unwatch(.:format)                                     watchers#unwatch
+                                               watcher DELETE              /watchers/:id(.:format)                                                        watchers#destroy
+                                               changes                     /issues/changes(.:format)                                                      journals#index
+                                      settings_project GET                 /projects/:id/settings(/:tab)(.:format)                                        projects#settings
+                                     copy_from_project GET                 /projects/:id/copy_project_from_(:coming_from)(.:format)                       copy_projects#copy_project {:coming_from=>/(admin|settings)/}
+                                          copy_project POST                /projects/:id/copy(.:format)                                                   copy_projects#copy
+                                       modules_project PUT                 /projects/:id/modules(.:format)                                                projects#modules
+                                       archive_project PUT                 /projects/:id/archive(.:format)                                                projects#archive
+                                     unarchive_project PUT                 /projects/:id/unarchive(.:format)                                              projects#unarchive
+                                   column_sums_project GET                 /projects/:id/column_sums(.:format)                                            work_packages#column_sums
+                               confirm_destroy_project GET                 /projects/:id/destroy_info(.:format)                                           projects#destroy_info
+                                  project_enumerations PUT                 /projects/:project_id/enumerations(.:format)                                   project_enumerations#update
+                                                       DELETE              /projects/:project_id/enumerations(.:format)                                   project_enumerations#destroy
+                      close_completed_project_versions PUT                 /projects/:project_id/versions/close_completed(.:format)                       versions#close_completed
+                                      project_versions POST                /projects/:project_id/versions(.:format)                                       versions#create
+                                   new_project_version GET                 /projects/:project_id/versions/new(.:format)                                   versions#new
+                                       project_roadmap GET                 /projects/:project_id/roadmap(.:format)                                        versions#index
+                                                       POST                /projects/types/:id(.:format)                                                  projects#types
+                                    project_news_index GET                 /projects/:project_id/news(.:format)                                           news#index
+                                                       POST                /projects/:project_id/news(.:format)                                           news#create
+                                      new_project_news GET                 /projects/:project_id/news/new(.:format)                                       news#new
+                           project_time_entries_report GET                 /projects/:project_id/time_entries/report(.:format)                            time_entries/reports#show
+                                  project_time_entries GET                 /projects/:project_id/time_entries(.:format)                                   timelog#index
+                                                       POST                /projects/:project_id/time_entries(.:format)                                   timelog#create
+                                new_project_time_entry GET                 /projects/:project_id/time_entries/new(.:format)                               timelog#new
+                               edit_project_time_entry GET                 /projects/:project_id/time_entries/:id/edit(.:format)                          timelog#edit
+                                    project_time_entry GET                 /projects/:project_id/time_entries/:id(.:format)                               timelog#show
+                                                       PUT                 /projects/:project_id/time_entries/:id(.:format)                               timelog#update
+                                                       DELETE              /projects/:project_id/time_entries/:id(.:format)                               timelog#destroy
+                             export_project_wiki_index GET                 /projects/:project_id/wiki/export(.:format)                                    wiki#export
+                         date_index_project_wiki_index GET                 /projects/:project_id/wiki/date_index(.:format)                                wiki#date_index
+                              index_project_wiki_index GET                 /projects/:project_id/wiki/index(.:format)                                     wiki#index
+                                wiki_diff_project_wiki GET                 /projects/:project_id/wiki/:id/diff/:version/vs/:version_from(.:format)        wiki#diff
+                                wiki_diff_project_wiki GET                 /projects/:project_id/wiki/:id/diff(/:version)(.:format)                       wiki#diff
+                            wiki_annotate_project_wiki GET                 /projects/:project_id/wiki/:id/annotate/:version(.:format)                     wiki#annotate
+                                   rename_project_wiki GET|PUT             /projects/:project_id/wiki/:id/rename(.:format)                                wiki#rename
+                              parent_page_project_wiki GET                 /projects/:project_id/wiki/:id/parent_page(.:format)                           wiki#edit_parent_page
+                                                       PUT                 /projects/:project_id/wiki/:id/parent_page(.:format)                           wiki#update_parent_page
+                                  history_project_wiki GET                 /projects/:project_id/wiki/:id/history(.:format)                               wiki#history
+                                  protect_project_wiki POST                /projects/:project_id/wiki/:id/protect(.:format)                               wiki#protect
+                           add_attachment_project_wiki POST                /projects/:project_id/wiki/:id/add_attachment(.:format)                        wiki#add_attachment
+                         list_attachments_project_wiki GET                 /projects/:project_id/wiki/:id/list_attachments(.:format)                      wiki#list_attachments
+                    select_main_menu_item_project_wiki GET                 /projects/:project_id/wiki/:id/select_main_menu_item(.:format)                 wiki_menu_items#select_main_menu_item
+                   replace_main_menu_item_project_wiki POST                /projects/:project_id/wiki/:id/replace_main_menu_item(.:format)                wiki_menu_items#replace_main_menu_item
+                                  preview_project_wiki POST                /projects/:project_id/wiki/:id/preview(.:format)                               wiki#preview
+                                     edit_project_wiki GET                 /projects/:project_id/wiki/:id/edit(.:format)                                  wiki#edit
+                                          project_wiki GET                 /projects/:project_id/wiki/:id(.:format)                                       wiki#show
+                                                       PUT                 /projects/:project_id/wiki/:id(.:format)                                       wiki#update
+                                                       DELETE              /projects/:project_id/wiki/:id(.:format)                                       wiki#destroy
+                                                       GET                 /projects/:project_id/wiki(.:format)                                           wiki#show
+                  project_work_packages_calendar_index GET                 /projects/:project_id/work_packages/calendar(.:format)                         work_packages/calendars#index
+                        new_type_project_work_packages GET                 /projects/:project_id/work_packages/new_type(.:format)                         work_packages#new_type
+                                                       GET                 /projects/:project_id/work_packages/report/:detail(.:format)                   work_packages/reports#report_details
+                          report_project_work_packages GET                 /projects/:project_id/work_packages/report(.:format)                           work_packages/reports#report
+                                                       GET                 /projects/:project_id/work_packages/:id/*state(.:format)                       work_packages#index {:id=>/\d+/}
+                                 project_work_packages GET                 /projects/:project_id/work_packages(.:format)                                  work_packages#index
+                                                       POST                /projects/:project_id/work_packages(.:format)                                  work_packages#create
+                              new_project_work_package GET                 /projects/:project_id/work_packages/new(.:format)                              work_packages#new
+                                project_activity_index GET                 /projects/:project_id/activity(.:format)                                       activities#index
+                                    project_activities GET                 /projects/:project_id/activities(.:format)                                     activities#index
+                         confirm_destroy_project_board GET                 /projects/:project_id/boards/:id/confirm_destroy(.:format)                     boards#confirm_destroy
+                                    move_project_board GET                 /projects/:project_id/boards/:id/move(.:format)                                boards#move
+                                                       POST                /projects/:project_id/boards/:id/move(.:format)                                boards#move
+                                        project_boards GET                 /projects/:project_id/boards(.:format)                                         boards#index
+                                                       POST                /projects/:project_id/boards(.:format)                                         boards#create
+                                     new_project_board GET                 /projects/:project_id/boards/new(.:format)                                     boards#new
+                                    edit_project_board GET                 /projects/:project_id/boards/:id/edit(.:format)                                boards#edit
+                                         project_board GET                 /projects/:project_id/boards/:id(.:format)                                     boards#show
+                                                       PUT                 /projects/:project_id/boards/:id(.:format)                                     boards#update
+                                                       DELETE              /projects/:project_id/boards/:id(.:format)                                     boards#destroy
+                                    project_categories POST                /projects/:project_id/categories(.:format)                                     categories#create
+                                  new_project_category GET                 /projects/:project_id/categories/new(.:format)                                 categories#new
+                                         edit_category GET                 /categories/:id/edit(.:format)                                                 categories#edit
+                                              category PUT                 /categories/:id(.:format)                                                      categories#update
+                                                       DELETE              /categories/:id(.:format)                                                      categories#destroy
+                          autocomplete_project_members GET                 /projects/:project_id/members/autocomplete(.:format)                           members#autocomplete
+                                       project_members POST                /projects/:project_id/members(.:format)                                        members#create
+                                                member PUT                 /members/:id(.:format)                                                         members#update
+                                                       DELETE              /members/:id(.:format)                                                         members#destroy
+                               edit_project_repository GET                 /projects/:project_id/repository/edit(.:format)                                repositories#edit
+                                                       POST                /projects/:project_id/repository/edit(.:format)                                repositories#edit
+                         committers_project_repository GET                 /projects/:project_id/repository/committers(.:format)                          repositories#committers
+                                                       POST                /projects/:project_id/repository/committers(.:format)                          repositories#committers
+                              graph_project_repository GET                 /projects/:project_id/repository/graph(.:format)                               repositories#graph
+                          revisions_project_repository GET                 /projects/:project_id/repository/revisions(.:format)                           repositories#revisions
+                              stats_project_repository GET                 /projects/:project_id/repository/statistics(.:format)                          repositories#stats
+                                                       GET                 /projects/:project_id/repository(/revisions/:rev)/diff.:format                 repositories#diff
+                                                       GET                 /projects/:project_id/repository(/revisions/:rev)/diff(/*path)                 repositories#diff
+                                                       GET                 /projects/:project_id/repository(/revisions/:rev)/:format/*path                repositories#entry {:format=>/raw/, :rev=>/[a-z0-9\.\-_]+/}
+                                                       GET                 /projects/:project_id/repository(/revisions/:rev)/diff(/*path)                 repositories#diff {:rev=>/[a-z0-9\.\-_]+/}
+                                                       GET                 /projects/:project_id/repository(/revisions/:rev)/annotate(/*path)             repositories#annotate {:rev=>/[a-z0-9\.\-_]+/}
+                                                       GET                 /projects/:project_id/repository(/revisions/:rev)/changes(/*path)              repositories#changes {:rev=>/[a-z0-9\.\-_]+/}
+                                                       GET                 /projects/:project_id/repository(/revisions/:rev)/entry(/*path)                repositories#entry {:rev=>/[a-z0-9\.\-_]+/}
+                                                       GET                 /projects/:project_id/repository(/revisions/:rev)/browse(/*path)               repositories#browse {:rev=>/[a-z0-9\.\-_]+/}
+                                                       GET                 /projects/:project_id/repository/revision(/:rev)(.:format)                     repositories#revision {:rev=>/[a-z0-9\.\-_]+/}
+                                                       GET                 /projects/:project_id/repository(/revisions/:rev)(/*path)                      repositories#show {:rev=>/[a-z0-9\.\-_]+/}
+                                    project_repository DELETE              /projects/:project_id/repository(.:format)                                     repositories#destroy
+                                              projects GET                 /projects(.:format)                                                            projects#index
+                                                       POST                /projects(.:format)                                                            projects#create
+                                           new_project GET                 /projects/new(.:format)                                                        projects#new
+                                               project GET                 /projects/:id(.:format)                                                        projects#show
+                                                       PUT                 /projects/:id(.:format)                                                        projects#update
+                                                       DELETE              /projects/:id(.:format)                                                        projects#destroy
+                                                 admin GET                 /admin(.:format)                                                               admin#index
+                                                       GET                 /admin/projects(.:format)                                                      admin#projects
+                                          enumerations GET                 /admin/enumerations(.:format)                                                  enumerations#index
+                                                       POST                /admin/enumerations(.:format)                                                  enumerations#create
+                                       new_enumeration GET                 /admin/enumerations/new(.:format)                                              enumerations#new
+                                      edit_enumeration GET                 /admin/enumerations/:id/edit(.:format)                                         enumerations#edit
+                                           enumeration GET                 /admin/enumerations/:id(.:format)                                              enumerations#show
+                                                       PUT                 /admin/enumerations/:id(.:format)                                              enumerations#update
+                                                       DELETE              /admin/enumerations/:id(.:format)                                              enumerations#destroy
+                           autocomplete_for_user_group GET                 /admin/groups/:id/autocomplete_for_user(.:format)                              groups#autocomplete_for_user
+                                      members_of_group POST                /admin/groups/:id/members(.:format)                                            groups#add_users
+                                       member_of_group DELETE              /admin/groups/:id/members/:user_id(.:format)                                   groups#remove_user
+                                   membership_of_group PUT                 /admin/groups/:id/memberships/:membership_id(.:format)                         groups#edit_membership
+                                   membership_of_group DELETE              /admin/groups/:id/memberships/:membership_id(.:format)                         groups#destroy_membership
+                                  memberships_of_group POST                /admin/groups/:id/memberships(.:format)                                        groups#create_memberships
+                                                groups GET                 /admin/groups(.:format)                                                        groups#index
+                                                       POST                /admin/groups(.:format)                                                        groups#create
+                                             new_group GET                 /admin/groups/new(.:format)                                                    groups#new
+                                            edit_group GET                 /admin/groups/:id/edit(.:format)                                               groups#edit
+                                                 group GET                 /admin/groups/:id(.:format)                                                    groups#show
+                                                       PUT                 /admin/groups/:id(.:format)                                                    groups#update
+                                                       DELETE              /admin/groups/:id(.:format)                                                    groups#destroy
+                                                 roles PUT                 /admin/roles(.:format)                                                         roles#bulk_update
+                                          report_roles GET                 /admin/roles/report(.:format)                                                  roles#report
+                                                       GET                 /admin/roles(.:format)                                                         roles#index
+                                                       POST                /admin/roles(.:format)                                                         roles#create
+                                              new_role GET                 /admin/roles/new(.:format)                                                     roles#new
+                                             edit_role GET                 /admin/roles/:id/edit(.:format)                                                roles#edit
+                                                  role PUT                 /admin/roles/:id(.:format)                                                     roles#update
+                                                       DELETE              /admin/roles/:id(.:format)                                                     roles#destroy
+                           test_connection_auth_source GET                 /admin/auth_sources/:id/test_connection(.:format)                              auth_sources#test_connection
+                                          auth_sources GET                 /admin/auth_sources(.:format)                                                  auth_sources#index
+                                                       POST                /admin/auth_sources(.:format)                                                  auth_sources#create
+                                       new_auth_source GET                 /admin/auth_sources/new(.:format)                                              auth_sources#new
+                                      edit_auth_source GET                 /admin/auth_sources/:id/edit(.:format)                                         auth_sources#edit
+                                           auth_source GET                 /admin/auth_sources/:id(.:format)                                              auth_sources#show
+                                                       PUT                 /admin/auth_sources/:id(.:format)                                              auth_sources#update
+                                                       DELETE              /admin/auth_sources/:id(.:format)                                              auth_sources#destroy
+                      test_connection_ldap_auth_source GET                 /admin/ldap_auth_sources/:id/test_connection(.:format)                         ldap_auth_sources#test_connection
+                                     ldap_auth_sources GET                 /admin/ldap_auth_sources(.:format)                                             ldap_auth_sources#index
+                                                       POST                /admin/ldap_auth_sources(.:format)                                             ldap_auth_sources#create
+                                  new_ldap_auth_source GET                 /admin/ldap_auth_sources/new(.:format)                                         ldap_auth_sources#new
+                                 edit_ldap_auth_source GET                 /admin/ldap_auth_sources/:id/edit(.:format)                                    ldap_auth_sources#edit
+                                      ldap_auth_source GET                 /admin/ldap_auth_sources/:id(.:format)                                         ldap_auth_sources#show
+                                                       PUT                 /admin/ldap_auth_sources/:id(.:format)                                         ldap_auth_sources#update
+                                                       DELETE              /admin/ldap_auth_sources/:id(.:format)                                         ldap_auth_sources#destroy
+                                              settings GET                 /settings(.:format)                                                            settings#index
+                                                  edit GET|POST            /settings/edit(.:format)                                                       settings#edit
+                                                       GET|POST            /settings/plugin/:id(.:format)                                                 settings#plugin
+                                             workflows GET                 /workflows(.:format)                                                           workflows#index
+                                                       GET|POST            /workflows/edit(.:format)                                                      workflows#edit
+                                                  copy GET|POST            /workflows/copy(.:format)                                                      workflows#copy
+                           work_packages_auto_complete GET|POST            /work_packages/auto_complete(.:format)                                         work_packages/auto_completes#index
+                          work_packages_calendar_index GET                 /work_packages/calendar(.:format)                                              work_packages/calendars#index
+                               edit_work_packages_bulk GET                 /work_packages/bulk/edit(.:format)                                             work_packages/bulk#edit
+                                    work_packages_bulk PUT                 /work_packages/bulk(.:format)                                                  work_packages/bulk#update
+                                                       DELETE              /work_packages/bulk(.:format)                                                  work_packages/bulk#destroy
+                                 new_type_work_package GET                 /work_packages/:id/new_type(.:format)                                          work_packages#new_type
+                             column_data_work_packages GET                 /work_packages/column_data(.:format)                                           work_packages#column_data
+                                work_package_relations POST                /work_packages/:work_package_id/relations(.:format)                            work_package_relations#create
+                                 work_package_relation DELETE              /work_packages/:work_package_id/relations/:id(.:format)                        work_package_relations#destroy
+                                new_move_work_packages GET                 /work_packages/move/new(.:format)                                              work_packages/moves#new
+                                    move_work_packages POST                /work_packages/move(.:format)                                                  work_packages/moves#create
+                                     work_package_move POST                /work_packages/:work_package_id/move(.:format)                                 work_packages/moves#create
+                                 new_work_package_move GET                 /work_packages/:work_package_id/move/new(.:format)                             work_packages/moves#new
+                      work_package_time_entries_report POST                /work_packages/:work_package_id/time_entries/report(.:format)                  time_entries/reports#create
+                  new_work_package_time_entries_report GET                 /work_packages/:work_package_id/time_entries/report/new(.:format)              time_entries/reports#new
+                 edit_work_package_time_entries_report GET                 /work_packages/:work_package_id/time_entries/report/edit(.:format)             time_entries/reports#edit
+                                                       GET                 /work_packages/:work_package_id/time_entries/report(.:format)                  time_entries/reports#show
+                                                       PUT                 /work_packages/:work_package_id/time_entries/report(.:format)                  time_entries/reports#update
+                                                       DELETE              /work_packages/:work_package_id/time_entries/report(.:format)                  time_entries/reports#destroy
+                             work_package_time_entries GET                 /work_packages/:work_package_id/time_entries(.:format)                         timelog#index
+                                                       POST                /work_packages/:work_package_id/time_entries(.:format)                         timelog#create
+                           new_work_package_time_entry GET                 /work_packages/:work_package_id/time_entries/new(.:format)                     timelog#new
+                          edit_work_package_time_entry GET                 /work_packages/:work_package_id/time_entries/:id/edit(.:format)                timelog#edit
+                               work_package_time_entry GET                 /work_packages/:work_package_id/time_entries/:id(.:format)                     timelog#show
+                                                       PUT                 /work_packages/:work_package_id/time_entries/:id(.:format)                     timelog#update
+                                                       DELETE              /work_packages/:work_package_id/time_entries/:id(.:format)                     timelog#destroy
+                                 preview_work_packages POST                /work_packages/preview(.:format)                                               work_packages#preview
+                                  preview_work_package POST                /work_packages/:id/preview(.:format)                                           work_packages#preview
+                                                       GET                 /work_packages/quoted/:id(.:format)                                            work_packages#quoted
+                                                       GET                 /work_packages/:id/edit(.:format)                                              work_packages#edit
+                                                       GET                 /work_packages/:id/*state(.:format)                                            work_packages#index {:id=>/\d+/}
+                                                       GET                 /work_packages(.:format)                                                       work_packages#index
+                                                       GET                 /work_packages/:id/edit(.:format)                                              work_packages#edit
+                                                       GET                 /work_packages/:id(.:format)                                                   work_packages#show
+                                                       PUT                 /work_packages/:id(.:format)                                                   work_packages#update
+                                     status_by_version GET                 /versions/:id/status_by(.:format)                                              versions#status_by
+                                          edit_version GET                 /versions/:id/edit(.:format)                                                   versions#edit
+                                               version GET                 /versions/:id(.:format)                                                        versions#show
+                                                       PUT                 /versions/:id(.:format)                                                        versions#update
+                                                       DELETE              /versions/:id(.:format)                                                        versions#destroy
+                                          journal_diff GET                 /journals/:id/diff/:field(.:format)                                            journals#diff
+                                   time_entries_report GET                 /time_entries/report(.:format)                                                 time_entries/reports#show
+                                          time_entries GET                 /time_entries(.:format)                                                        timelog#index
+                                                       POST                /time_entries(.:format)                                                        timelog#create
+                                        new_time_entry GET                 /time_entries/new(.:format)                                                    timelog#new
+                                       edit_time_entry GET                 /time_entries/:id/edit(.:format)                                               timelog#edit
+                                            time_entry GET                 /time_entries/:id(.:format)                                                    timelog#show
+                                                       PUT                 /time_entries/:id(.:format)                                                    timelog#update
+                                                       DELETE              /time_entries/:id(.:format)                                                    timelog#destroy
+                                        activity_index GET                 /activity(.:format)                                                            activities#index
+                                            activities GET                 /activities(.:format)                                                          activities#index
+                                                       GET                 /users/:id/edit/:tab(.:format)                                                 users#edit
+                                                       POST                /users/:id/memberships/:membership_id/destroy(.:format)                        users#destroy_membership
+                                                       POST                /users/:id/memberships/:membership_id(.:format)                                users#edit_membership
+                                      memberships_user POST                /users/:id/memberships(.:format)                                               users#edit_membership
+                                    change_status_user POST                /users/:id/change_status(.:format)                                             users#change_status
+                                  edit_membership_user POST                /users/:id/edit_membership(.:format)                                           users#edit_membership
+                               destroy_membership_user POST                /users/:id/destroy_membership(.:format)                                        users#destroy_membership
+                                    deletion_info_user GET                 /users/:id/deletion_info(.:format)                                             users#deletion_info
+                                                 users GET                 /users(.:format)                                                               users#index
+                                                       POST                /users(.:format)                                                               users#create
+                                              new_user GET                 /users/new(.:format)                                                           users#new
+                                             edit_user GET                 /users/:id/edit(.:format)                                                      users#edit
+                                                  user GET                 /users/:id(.:format)                                                           users#show
+                                                       PUT                 /users/:id(.:format)                                                           users#update
+                                                       DELETE              /users/:id(.:format)                                                           users#destroy
+                                           quote_topic GET                 /topics/:id/quote(.:format)                                                    messages#quote
+                                        reply_to_topic POST                /topics/:id/reply(.:format)                                                    messages#reply
+                                         preview_topic POST                /topics/:id/preview(.:format)                                                  messages#preview
+                                  preview_board_topics POST                /boards/:board_id/topics/preview(.:format)                                     messages#preview
+                                          board_topics POST                /boards/:board_id/topics(.:format)                                             messages#create
+                                       new_board_topic GET                 /boards/:board_id/topics/new(.:format)                                         messages#new
+                                            edit_topic GET                 /topics/:id/edit(.:format)                                                     messages#edit
+                                                 topic GET                 /topics/:id(.:format)                                                          messages#show
+                                                       PUT                 /topics/:id(.:format)                                                          messages#update
+                                                       DELETE              /topics/:id(.:format)                                                          messages#destroy
+                                         news_comments POST                /news/:news_id/comments(.:format)                                              news/comments#create
+                                               comment DELETE              /comments/:id(.:format)                                                        news/comments#destroy
+                                          preview_news POST                /news/:id/preview(.:format)                                                    news#preview
+                                    preview_news_index POST                /news/preview(.:format)                                                        news#preview
+                                            news_index GET                 /news(.:format)                                                                news#index
+                                             edit_news GET                 /news/:id/edit(.:format)                                                       news#edit
+                                                  news GET                 /news/:id(.:format)                                                            news#show
+                                                       PUT                 /news/:id(.:format)                                                            news#update
+                                                       DELETE              /news/:id(.:format)                                                            news#destroy
+                                   download_attachment GET                 /attachments/:id/download(/:filename)                                          attachments#download {:id=>/\d+/, :filename=>/[^\/]*/}
+                                                       GET                 /attachments/:id/:filename                                                     attachments#show {:id=>/\d+/, :filename=>/[^\/]*/}
+                                            attachment GET                 /attachments/:id                                                               attachments#show
+                                                       DELETE              /attachments/:id                                                               attachments#destroy
+                                                                           /attachments/download/:id/:filename                                            :controller#:action {:id=>/\d+/, :filename=>/[^\/]*/}
+                                                                           /attachments/download/:id                                                      :controller#:action {:id=>/\d+/, :filename=>/[^\/]*/}
+                                                       GET                 /sys/projects.:format                                                          sys#projects
+                                                       POST                /sys/projects/:id/repository.:format                                           sys#create_project_repository
+                                delete_my_account_info GET                 /my/deletion_info(.:format)                                                    users#deletion_info
+                                          my_add_block POST                /my/add_block(.:format)                                                        my#add_block
+                                       my_remove_block POST                /my/remove_block(.:format)                                                     my#remove_block
+                                        my_page_layout GET                 /my/page_layout(.:format)                                                      my#page_layout
+                                           my_password GET                 /my/password(.:format)                                                         my#password
+                                    my_change_password POST                /my/change_password(.:format)                                                  my#change_password
+                                        my_first_login GET|PUT             /my/first_login(.:format)                                                      my#first_login
+                                               my_page GET                 /my/page(.:format)                                                             my#page
+                                        authentication GET                 /authentication(.:format)                                                      authentication#index
+                                 confirm_destroy_color GET                 /colors/:id/confirm_destroy(.:format)                                          planning_element_type_colors#confirm_destroy
+                                            move_color GET                 /colors/:id/move(.:format)                                                     planning_element_type_colors#move
+                                                       POST                /colors/:id/move(.:format)                                                     planning_element_type_colors#move
+                                                colors GET                 /colors(.:format)                                                              planning_element_type_colors#index
+                                                       POST                /colors(.:format)                                                              planning_element_type_colors#create
+                                             new_color GET                 /colors/new(.:format)                                                          planning_element_type_colors#new
+                                            edit_color GET                 /colors/:id/edit(.:format)                                                     planning_element_type_colors#edit
+                                                 color GET                 /colors/:id(.:format)                                                          planning_element_type_colors#show
+                                                       PUT                 /colors/:id(.:format)                                                          planning_element_type_colors#update
+                                                       DELETE              /colors/:id(.:format)                                                          planning_element_type_colors#destroy
+                          confirm_destroy_project_type GET                 /project_types/:id/confirm_destroy(.:format)                                   project_types#confirm_destroy
+                                     move_project_type GET                 /project_types/:id/move(.:format)                                              project_types#move
+                                                       POST                /project_types/:id/move(.:format)                                              project_types#move
+                                 project_type_projects GET                 /project_types/:project_type_id/projects(.:format)                             projects#index
+                                  project_type_project GET                 /project_types/:project_type_id/projects/:id(.:format)                         projects#show
+                project_type_reported_project_statuses GET                 /project_types/:project_type_id/reported_project_statuses(.:format)            reported_project_statuses#index
+                                                       POST                /project_types/:project_type_id/reported_project_statuses(.:format)            reported_project_statuses#create
+              new_project_type_reported_project_status GET                 /project_types/:project_type_id/reported_project_statuses/new(.:format)        reported_project_statuses#new
+             edit_project_type_reported_project_status GET                 /project_types/:project_type_id/reported_project_statuses/:id/edit(.:format)   reported_project_statuses#edit
+                  project_type_reported_project_status GET                 /project_types/:project_type_id/reported_project_statuses/:id(.:format)        reported_project_statuses#show
+                                                       PUT                 /project_types/:project_type_id/reported_project_statuses/:id(.:format)        reported_project_statuses#update
+                                                       DELETE              /project_types/:project_type_id/reported_project_statuses/:id(.:format)        reported_project_statuses#destroy
+                                         project_types GET                 /project_types(.:format)                                                       project_types#index
+                                                       POST                /project_types(.:format)                                                       project_types#create
+                                      new_project_type GET                 /project_types/new(.:format)                                                   project_types#new
+                                     edit_project_type GET                 /project_types/:id/edit(.:format)                                              project_types#edit
+                                          project_type GET                 /project_types/:id(.:format)                                                   project_types#show
+                                                       PUT                 /project_types/:id(.:format)                                                   project_types#update
+                                                       DELETE              /project_types/:id(.:format)                                                   project_types#destroy
+           confirm_destroy_project_project_association GET                 /projects/:project_id/project_associations/:id/confirm_destroy(.:format)       project_associations#confirm_destroy
+       available_projects_project_project_associations GET                 /projects/:project_id/project_associations/available_projects(.:format)        project_associations#available_projects
+                          project_project_associations GET                 /projects/:project_id/project_associations(.:format)                           project_associations#index
+                                                       POST                /projects/:project_id/project_associations(.:format)                           project_associations#create
+                       new_project_project_association GET                 /projects/:project_id/project_associations/new(.:format)                       project_associations#new
+                      edit_project_project_association GET                 /projects/:project_id/project_associations/:id/edit(.:format)                  project_associations#edit
+                           project_project_association GET                 /projects/:project_id/project_associations/:id(.:format)                       project_associations#show
+                                                       PUT                 /projects/:project_id/project_associations/:id(.:format)                       project_associations#update
+                                                       DELETE              /projects/:project_id/project_associations/:id(.:format)                       project_associations#destroy
+                     confirm_destroy_project_reporting GET                 /projects/:project_id/reportings/:id/confirm_destroy(.:format)                 reportings#confirm_destroy
+                                    project_reportings GET                 /projects/:project_id/reportings(.:format)                                     reportings#index
+                                                       POST                /projects/:project_id/reportings(.:format)                                     reportings#create
+                                 new_project_reporting GET                 /projects/:project_id/reportings/new(.:format)                                 reportings#new
+                                edit_project_reporting GET                 /projects/:project_id/reportings/:id/edit(.:format)                            reportings#edit
+                                     project_reporting GET                 /projects/:project_id/reportings/:id(.:format)                                 reportings#show
+                                                       PUT                 /projects/:project_id/reportings/:id(.:format)                                 reportings#update
+                                                       DELETE              /projects/:project_id/reportings/:id(.:format)                                 reportings#destroy
+                                     project_timelines GET                 /projects/:project_id/timelines(.:format)                                      timelines#index
+                                                       POST                /projects/:project_id/timelines(.:format)                                      timelines#create
+                                  new_project_timeline GET                 /projects/:project_id/timelines/new(.:format)                                  timelines#new
+                                 edit_project_timeline GET                 /projects/:project_id/timelines/:id/edit(.:format)                             timelines#edit
+                                      project_timeline GET                 /projects/:project_id/timelines/:id(.:format)                                  timelines#show
+                                                       PUT                 /projects/:project_id/timelines/:id(.:format)                                  timelines#update
+                                                       DELETE              /projects/:project_id/timelines/:id(.:format)                                  timelines#destroy
+                                                       GET                 /projects(.:format)                                                            projects#index
+                                                       GET                 /projects/:id(.:format)                                                        projects#show
+                             reported_project_statuses GET                 /reported_project_statuses(.:format)                                           reported_project_statuses#index
+                                                       POST                /reported_project_statuses(.:format)                                           reported_project_statuses#create
+                           new_reported_project_status GET                 /reported_project_statuses/new(.:format)                                       reported_project_statuses#new
+                          edit_reported_project_status GET                 /reported_project_statuses/:id/edit(.:format)                                  reported_project_statuses#edit
+                               reported_project_status GET                 /reported_project_statuses/:id(.:format)                                       reported_project_statuses#show
+                                                       PUT                 /reported_project_statuses/:id(.:format)                                       reported_project_statuses#update
+                                                       DELETE              /reported_project_statuses/:id(.:format)                                       reported_project_statuses#destroy
+                                  deprecated_roles_new GET                 /roles/new(.:format)                                                           roles#new
+                                                                           /:controller(/:action(/:id))(.:format)                                         :controller#:action
+                                                robots                     /robots(.:format)                                                              welcome#robots {:format=>:txt}
+                                                  root                     /                                                                              account#login
