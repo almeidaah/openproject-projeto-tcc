@@ -59,6 +59,8 @@ class CustomFieldsController < ApplicationController
   def edit; end
 
   def update
+    puts "UPDATE CUSTOM FIEEEEEEEEEEEEEEEEEEEEEEEEEEEELD"
+    puts @custom_field_params
     if @custom_field.update_attributes(@custom_field_params)
       flash[:notice] = l(:notice_successful_update)
       call_hook(:controller_custom_fields_edit_after_save, custom_field: @custom_field)
